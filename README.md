@@ -1,0 +1,1 @@
+# Naratteu.TextTemplating.SourceGenerator
