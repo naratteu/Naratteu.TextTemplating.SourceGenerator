@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference GeneratePathProperty="true" Version="3.0.0" PrivateAssets="all" Include="Mono.TextTemplating" />
+    <PackageReference GeneratePathProperty="true" Version="3.0.0" PrivateAssets="all" Include="Mono.TextTemplating.Roslyn" />
+    <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(PkgMono_TextTemplating)/lib/netstandard2.0/Mono.TextTemplating.dll"  />
+    <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(PkgMono_TextTemplating_Roslyn)/lib/netstandard2.0/Mono.TextTemplating.Roslyn.dll" />
+    <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(OutputPath)$(AssemblyName).dll" />
+    <PackageReference Include="PolySharp" Version="1.15.0" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
