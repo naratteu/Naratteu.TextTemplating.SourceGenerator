@@ -3,7 +3,15 @@
 ## Play
 
 ```bash
+git clone https://github.com/naratteu/Naratteu.TextTemplating.SourceGenerator
 cd Naratteu.TextTemplating.SourceGenerator
-dotnet pack -p:Version=0.0.49 && dotnet outdated ../Playground -u && dotnet run --project ../Playground
+cd Naratteu.TextTemplating.SourceGenerator
+dotnet pack -p:Version=0.0.1-test
+dotnet run --project ../Playground
 # Hello, 1764!
 ```
+
+## See Also
+
+- https://github.com/CptWesley/T4.SourceGenerator
+- https://github.com/JakeSays/TextTemplating
