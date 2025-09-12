@@ -7,8 +7,10 @@
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference GeneratePathProperty="true" Version="6.0.0" Include="System.CodeDom"/>
     <PackageReference GeneratePathProperty="true" Version="3.0.0" PrivateAssets="all" Include="Mono.TextTemplating" />
     <PackageReference GeneratePathProperty="true" Version="3.0.0" PrivateAssets="all" Include="Mono.TextTemplating.Roslyn" />
+    <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(PkgSystem_CodeDom)/lib/netstandard2.0/System.CodeDom.dll" />
     <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(PkgMono_TextTemplating)/lib/netstandard2.0/Mono.TextTemplating.dll" />
     <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(PkgMono_TextTemplating_Roslyn)/lib/netstandard2.0/Mono.TextTemplating.Roslyn.dll" />
     <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(OutputPath)$(AssemblyName).dll" />
