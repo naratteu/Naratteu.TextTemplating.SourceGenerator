@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Naratteu.TextTemplating.SourceGenerator" Version="0.0.1-test" />
-    <AdditionalFiles Include="*.tt" />
+    <PackageReference Include="Naratteu.T4JS" Version="0.0.1-test" />
+    <AdditionalFiles Include="*.t4.js" />
   </ItemGroup>
 
 </Project>

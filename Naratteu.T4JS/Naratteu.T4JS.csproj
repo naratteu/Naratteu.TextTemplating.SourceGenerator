@@ -5,8 +5,10 @@
 		<Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <BuildOutputTargetFolder>analyzers/dotnet/cs</BuildOutputTargetFolder>
   </PropertyGroup>
   <ItemGroup>
+    <!--
     <PackageReference GeneratePathProperty="true" Version="6.0.0" Include="System.CodeDom"/>
     <PackageReference GeneratePathProperty="true" Version="3.0.0" PrivateAssets="all" Include="Mono.TextTemplating" />
     <PackageReference GeneratePathProperty="true" Version="3.0.0" PrivateAssets="all" Include="Mono.TextTemplating.Roslyn" />
@@ -14,5 +16,9 @@
     <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(PkgMono_TextTemplating)/lib/netstandard2.0/Mono.TextTemplating.dll" />
     <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(PkgMono_TextTemplating_Roslyn)/lib/netstandard2.0/Mono.TextTemplating.Roslyn.dll" />
     <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(OutputPath)$(AssemblyName).dll" />
+    -->
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.11.0" />
+    <PackageReference Include="NiL.JS" Version="2.6.1700" GeneratePathProperty="true" PrivateAssets="all" />
+    <None Pack="true" PackagePath="analyzers/dotnet/cs" Include="$(PkgNiL_JS)/lib/net461/NiL.JS.dll" />
   </ItemGroup>
 </Project>
